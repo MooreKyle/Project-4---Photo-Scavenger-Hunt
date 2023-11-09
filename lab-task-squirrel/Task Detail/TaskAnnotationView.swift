@@ -1,8 +1,8 @@
 //
 //  TaskAnnotationView.swift
-//  lab-task-squirrel
+//  Project 4 - Photo Scavenger Hunt
 //
-//  Created by Charlie Hieger on 11/19/22.
+//  Created by Kyle Moore on 11/8/2023.
 //
 
 import UIKit

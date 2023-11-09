@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  lab-task-squirrel
+//  Project 4 - Photo Scavenger Hunt
 //
-//  Created by Charlie Hieger on 11/15/22.
+//  Created by Kyle Moore on 11/8/2023.
 //
 
 import UIKit
