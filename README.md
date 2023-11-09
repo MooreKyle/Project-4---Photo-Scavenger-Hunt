@@ -34,6 +34,11 @@ Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove th
 
 Describe any challenges encountered while building the app.
 
+Attempting to get the camera functionality working has mixed results, and am unsure if it works properly in simulator or needs testing on a real life device.
+ - Unsure if camera is detected and functioning via simulator in xcode. Compatible device (iPhone 15 and iPhone 15 Pro) via Xcode used for testing.
+ - Camera app shows in background when app is newly installed and app requests permissions for access to photo library, and camera app shows after this.
+ -  However, exiting the camera menu afterwards, it does not show at any other point again, even after closing and reopening app.
+
 ## License
 
     Copyright [yyyy] [name of copyright owner]
