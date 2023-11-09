@@ -37,7 +37,11 @@ Describe any challenges encountered while building the app.
 Attempting to get the camera functionality working has mixed results, and am unsure if it works properly in simulator or needs testing on a real life device.
  - Unsure if camera is detected and functioning via simulator in xcode. Compatible device (iPhone 15 and iPhone 15 Pro) via Xcode used for testing.
  - Camera app shows in background when app is newly installed and app requests permissions for access to photo library, and camera app shows after this.
- -  However, exiting the camera menu afterwards, it does not show at any other point again, even after closing and reopening app.
+      - However, exiting the camera menu afterwards, it does not show at any other point again, even after closing and reopening app.
+
+ -  Camera code was added to TaskDetailViewController.swift.
+
+ - I am unsure if the code itself will count as implementation of the optional feature of the camera's ability to take a picture. For the one time I was able to access the camera app, the camera snap button to take a picture was nonfunctional, and the camera showed a black screen, as if the app was frozen.
 
 ## License
 
