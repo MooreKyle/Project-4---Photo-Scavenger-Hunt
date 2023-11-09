@@ -4,6 +4,7 @@
 //
 //  Created by Kyle Moore on 11/8/2023.
 //
+//
 
 import UIKit
 import MapKit
@@ -11,7 +12,7 @@ import PhotosUI
 
 // TODO: Import PhotosUI
 
-class TaskDetailViewController: UIViewController {
+class TaskDetailViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet private weak var completedImageView: UIImageView!
     @IBOutlet private weak var completedLabel: UILabel!
@@ -88,6 +89,39 @@ class TaskDetailViewController: UIViewController {
             // Show photo picker
             presentImagePicker()
         }
+        
+        // Check if device has a camera
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .camera
+                present(imagePicker, animated: true, completion: nil)
+            } else {
+                // Device doesn't have a camera available
+                // You can display an alert or take any other action you prefer
+                showNoCameraAlert()
+            }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                // Do something with the captured image (e.g., display it, save it, etc.)
+                // For example, you can set it to a UIImageView
+                completedImageView.image = image
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+    
+    func showNoCameraAlert() {
+        let alertController = UIAlertController(
+            title: "No Camera Available",
+            message: "This device does not have a camera available.",
+            preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+
+        present(alertController, animated: true)
     }
 
     private func presentImagePicker() {
